@@ -1,0 +1,5 @@
+statsbombpy
+pandas
+numpy
+scikit-learn
+matplotlib
