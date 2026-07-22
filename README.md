@@ -25,6 +25,11 @@ The objective was not to find the "best" defender, but to identify players with 
 \---
 
 
+## Example Output
+
+The project produces statistical player comparisons and recruitment recommendations.
+
+![Centre-back comparison radar chart](visuals/RadarChart.png)
 
 \# Scouting Workflow
 
@@ -160,9 +165,14 @@ These players represent different scouting options depending on recruitment prio
 
 \# Player Comparison
 
+The radar chart compares Marc Guéhi's statistical profile with the closest centre-back matches identified by the similarity model.
 
+The visualisation highlights differences in:
+- defensive activity
+- ball retention
+- progression ability
 
-!\[Centre-back comparison radar chart](visuals/RadarChart.png)
+![Centre-back comparison radar chart](visuals/RadarChart.png)
 
 
 
@@ -178,7 +188,7 @@ A full written scouting report is available here:
 
 
 
-\[Open PDF scouting report](report/scouting\_report.pdf)
+[Open PDF scouting report](report/scouting_report.pdf)
 
 
 
