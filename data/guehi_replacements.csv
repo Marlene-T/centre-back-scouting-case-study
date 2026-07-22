@@ -1,0 +1,4 @@
+player_name,team,matches,minutes,tackles,interceptions,clearances,total_passes,completed_passes,pass_completion_pct,player,progressive_passes,tackles_p90,interceptions_p90,clearances_p90,progressive_passes_p90,similarity_score
+Marc Guéhi,England,6,540,4,2,12,452,422,93.36283185840708,Marc Guehi,36,0.6666666666666667,0.3333333333333333,2.0,6.0,1.0000000000000002
+Riccardo Calafiori,Italy,3,270,4,2,8,238,220,92.43697478991596,Riccardo Calafiori,13,1.3333333333333337,0.6666666666666667,2.666666666666667,4.333333333333333,0.8087345968324482
+Robin Aime Robert Le Normand,Spain,6,540,4,1,11,351,325,92.5925925925926,Robin Aime Robert Le Normand,27,0.6666666666666667,0.1666666666666666,1.8333333333333333,4.5,0.9767454925281528
