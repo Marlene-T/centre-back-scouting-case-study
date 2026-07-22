@@ -1,26 +1,24 @@
-\# Centre Back Scouting Case Study
-
-\## Finding a Replacement for Marc Guéhi Using Data Analytics
+\# Centre-Back Scouting Case Study — Euro 2024
 
 
 
-\## Project Objective
+\## Overview
 
 
 
-This project answers a football recruitment question:
+This project replicates a professional football recruitment workflow: identifying potential replacement candidates for a key centre-back using event data and statistical similarity modelling.
 
 
 
-\*\*"Who could replace Marc Guéhi based on statistical similarity?"\*\*
+The scouting question:
 
 
 
-The objective was to identify centre backs with a similar performance profile to Marc Guéhi using event-level football data and statistical modelling.
+> "If Marc Guéhi became unavailable, which defenders at Euro 2024 present a similar profile?"
 
 
 
-The analysis combines defensive output and possession contribution to create a shortlist of potential replacement candidates.
+The objective was not to find the "best" defender, but to identify players with comparable playing characteristics who could represent realistic recruitment targets.
 
 
 
@@ -28,61 +26,57 @@ The analysis combines defensive output and possession contribution to create a s
 
 
 
-\# Data Source
+\# Scouting Workflow
 
 
 
-\*\*StatsBomb Open Data\*\*
+The analysis follows a data-driven scouting pipeline:
 
 
 
-Competition analysed:
+1\. \*\*Data collection\*\*
+
+&#x20;  - StatsBomb Open Data
+
+&#x20;  - UEFA Euro 2024 match events and lineups
 
 
 
-\*\*UEFA Euro 2024\*\*
+2\. \*\*Player identification\*\*
+
+&#x20;  - Centre-backs selected from tournament lineups
 
 
 
-Dataset:
+3\. \*\*Metric creation\*\*
+
+&#x20;  - Defensive actions
+
+&#x20;  - Passing contribution
+
+&#x20;  - Progressive distribution
 
 
 
-\- 51 matches analysed
+4\. \*\*Normalisation\*\*
 
-\- 187,924 events processed
-
-\- 108 centre backs identified
-
-\- 58 centre backs analysed after applying a minimum playing time threshold
+&#x20;  - Per 90 minute statistics
 
 
 
-\---
+5\. \*\*Similarity modelling\*\*
+
+&#x20;  - Statistical distance calculation
+
+&#x20;  - Comparison against Marc Guéhi's profile
 
 
 
-\# Methodology
+6\. \*\*Scouting report generation\*\*
 
+&#x20;  - Automated PDF report
 
-
-\## 1. Data Collection
-
-
-
-Match events and player lineups were collected using the StatsBomb open data package:
-
-
-
-\- Match events
-
-\- Player actions
-
-\- Defensive actions
-
-\- Passing events
-
-\- Player positions
+&#x20;  - Player comparison visualisation
 
 
 
@@ -90,45 +84,17 @@ Match events and player lineups were collected using the StatsBomb open data pac
 
 
 
-\## 2. Player Filtering
+\# Data \& Metrics
 
 
 
-Only centre backs were included.
+The model evaluates centre-backs using:
 
 
 
-Players were filtered using:
+\### Defensive metrics
 
-
-
-\- Centre-back position data
-
-\- Minimum 270 minutes played
-
-
-
-This reduces the impact of small sample sizes.
-
-
-
-\---
-
-
-
-\## 3. Performance Metrics
-
-
-
-Players were evaluated using:
-
-
-
-\### Defensive Metrics
-
-
-
-\- Tackles won per 90
+\- Tackles per 90
 
 \- Interceptions per 90
 
@@ -136,61 +102,17 @@ Players were evaluated using:
 
 
 
-\### Possession Metrics
+\### Ball progression metrics
 
-
-
-\- Pass completion percentage
+\- Pass completion %
 
 \- Progressive passes per 90
 
 
 
-\---
+\### Availability filter
 
-
-
-\## 4. Similarity Model
-
-
-
-A statistical similarity model was created to compare each defender against Marc Guéhi's profile.
-
-
-
-The model ranks players based on the distance between their performance profiles.
-
-
-
-Lower distance = more similar profile.
-
-
-
-\---
-
-
-
-\# Results
-
-
-
-\## Closest Statistical Profiles to Marc Guéhi
-
-
-
-| Rank | Player | Team |
-
-|---|---|---|
-
-| 1 | Robin Le Normand | Spain |
-
-| 2 | Jan Vertonghen | Belgium |
-
-| 3 | Riccardo Calafiori | Italy |
-
-| 4 | Wout Faes | Belgium |
-
-| 5 | Jonathan Tah | Germany |
+\- Minimum 270 minutes played
 
 
 
@@ -202,45 +124,33 @@ Lower distance = more similar profile.
 
 
 
-The model identified:
+The model identified the following players as the closest statistical profiles to Marc Guéhi:
 
 
 
-\## Robin Le Normand
+| Player | Team | Profile similarity |
+
+|---|---|---|
+
+| Robin Le Normand | Spain | Closest statistical match |
+
+| Jan Vertonghen | Belgium | Similar defensive and passing profile |
+
+| Riccardo Calafiori | Italy | Similar progressive profile |
+
+| Wout Faes | Belgium | Comparable defensive output |
 
 
 
-as the closest statistical match to Marc Guéhi.
+These players represent different scouting options depending on recruitment priorities:
 
+\- immediate defensive reliability
 
+\- ball progression
 
-His profile showed similarities in:
+\- experience
 
-
-
-\- Defensive reliability
-
-\- Passing efficiency
-
-\- Positional consistency
-
-\- Ability to play in structured defensive systems
-
-
-
-\## Riccardo Calafiori
-
-
-
-was identified as a higher-upside alternative due to:
-
-
-
-\- Progressive passing ability
-
-\- Technical quality
-
-\- Modern centre-back profile
+\- tactical similarity
 
 
 
@@ -248,19 +158,11 @@ was identified as a higher-upside alternative due to:
 
 
 
-\# Visual Analysis
+\# Player Comparison
 
 
 
-The project includes:
-
-
-
-\- Player similarity ranking
-
-\- Radar chart comparison
-
-\- Scouting report PDF
+!\[Centre-back comparison radar chart](visuals/RadarChart.png)
 
 
 
@@ -268,51 +170,55 @@ The project includes:
 
 
 
-\# Tools Used
+\# Final Scouting Report
 
 
 
-Programming:
+A full written scouting report is available here:
+
+
+
+\[Open PDF scouting report](report/scouting\_report.pdf)
+
+
+
+\---
+
+
+
+\# Technical Implementation
+
+
+
+Built with:
 
 
 
 \- Python
 
+\- Pandas
 
+\- StatsBomb event data
 
-Libraries:
+\- Scikit-learn
 
-
-
-\- pandas
-
-\- statsbombpy
-
-\- scikit-learn
-
-\- matplotlib
+\- Matplotlib
 
 
 
-\---
+Project structure:
 
 
 
-\# Project Structure
+centre-back-scouting-case-study/
 
 
 
-centre-back-scouting-case-study
+├── data/
+
+│ └── Match events and lineup data
 
 
-
-├── README.md
-
-├── report/
-
-│ └── scouting\_report.pdf
-
-│
 
 ├── scripts/
 
@@ -324,17 +230,25 @@ centre-back-scouting-case-study
 
 │ └── 04\_radar\_chart.py
 
-│
 
-├── data/
 
-│ └── centre\_back\_metrics\_v2.csv
+├── visuals/
 
-│
+│ └── RadarChart.png
 
-└── visuals/
 
-└── radar\_chart.png
+
+├── report/
+
+│ ├── scouting\_report.md
+
+│ ├── scouting\_report.html
+
+│ └── scouting\_report.pdf
+
+
+
+└── README.md
 
 
 
@@ -344,37 +258,23 @@ centre-back-scouting-case-study
 
 
 
-\# Limitations
+\# Skills Demonstrated
 
 
 
-This model should be combined with traditional scouting.
+\- Football scouting methodology
 
+\- Recruitment analytics
 
+\- Event data processing
 
-Limitations:
+\- Player profiling
 
+\- Similarity modelling
 
+\- Data visualisation
 
-\- Euro 2024 is a limited sample size
-
-\- Players faced different opposition levels
-
-\- Tactical roles vary between teams
-
-\- Some qualities cannot be measured statistically:
-
-&#x20; - Leadership
-
-&#x20; - Communication
-
-&#x20; - Positioning
-
-&#x20; - Personality
-
-
-
-The model identifies statistical similarity, not guaranteed future performance.
+\- Automated reporting
 
 
 
@@ -386,37 +286,5 @@ The model identifies statistical similarity, not guaranteed future performance.
 
 
 
-This project demonstrates how football event data can support recruitment decisions.
-
-
-
-By combining:
-
-
-
-\- Data collection
-
-\- Performance metrics
-
-\- Statistical modelling
-
-\- Visualisation
-
-\- Scouting interpretation
-
-
-
-it creates a repeatable framework for identifying potential player replacements.
-
-
-
-\---
-
-
-
-\# Author
-
-
-
-Marlene Thiery
+This project demonstrates how football data can support recruitment decisions by transforming event-level match information into actionable scouting insights.
 
